@@ -1,9 +1,22 @@
 #include <iostream>
+#include "interfaces/imedia.h"
+#include "music.h"
 
-using namespace std;
+void playMedia(iMedia &mediaPlayer)
+{
+    mediaPlayer.play();
+}
+
+void pauseMedia(iMedia &mediaPlayer)
+{
+    mediaPlayer.pause();
+}
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    Music musicPlayer;
+    playMedia(musicPlayer);
+    pauseMedia(musicPlayer);
+
     return 0;
 }
